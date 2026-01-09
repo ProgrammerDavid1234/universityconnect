@@ -12,17 +12,12 @@ const initialEnrolledCourses = [
 ];
 
 const Enrollments = () => {
-    const [available, setAvailable] = useState(initialAvailableCourses);
     const [enrolled, setEnrolled] = useState(initialEnrolledCourses);
 
-    const handleEnroll = (course) => {
-        setEnrolled([...enrolled, course]);
-        setAvailable(available.filter((c) => c.id !== course.id));
-    };
-
     const handleUnenroll = (course) => {
-        setAvailable([...available, course]);
-        setEnrolled(enrolled.filter((c) => c.id !== course.id));
+        if (window.confirm('Are you sure you want to drop this course?')) {
+            setEnrolled(enrolled.filter((c) => c.id !== course.id));
+        }
     };
 
     return (
@@ -32,7 +27,7 @@ const Enrollments = () => {
                 <p className="text-gray-500 text-sm mt-1">Manage your semester course load</p>
             </header>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="max-w-4xl mx-auto">
                 {/* Enrolled Section */}
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
@@ -51,7 +46,7 @@ const Enrollments = () => {
                                 <BookCheck size={24} />
                             </div>
                             <p className="text-gray-500 font-medium">No courses enrolled yet.</p>
-                            <p className="text-xs text-gray-400 mt-1">Select from available courses to get started.</p>
+                            <p className="text-xs text-gray-400 mt-1">Visit the Courses tab to enroll.</p>
                         </div>
                     ) : (
                         <div className="space-y-4">
@@ -74,51 +69,6 @@ const Enrollments = () => {
                                             title="Unenroll"
                                         >
                                             <MinusCircle size={18} />
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
-                {/* Available Section */}
-                <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
-                    <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                            <PlusCircle size={20} />
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold text-gray-800">Available Courses</h3>
-                            <p className="text-xs text-gray-500 font-medium">{available.length} Options</p>
-                        </div>
-                    </div>
-
-                    {available.length === 0 ? (
-                        <div className="flex-1 flex flex-col items-center justify-center text-center p-8">
-                            <p className="text-gray-400 italic">No more courses available.</p>
-                        </div>
-                    ) : (
-                        <div className="space-y-4">
-                            {available.map((course) => (
-                                <div key={course.id} className="group bg-white rounded-2xl p-4 border border-gray-100 flex justify-between items-center transition-all hover:border-blue-200 hover:shadow-md">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-gray-50 text-gray-500 font-bold text-xs flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
-                                            {course.code.split(' ')[0]}
-                                        </div>
-                                        <div>
-                                            <div className="font-bold text-gray-800 text-sm group-hover:text-blue-700 transition-colors">{course.code}</div>
-                                            <div className="text-xs text-gray-500 font-medium">{course.title}</div>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-xs font-semibold text-gray-400 bg-gray-50 px-2 py-1 rounded">{course.units} Units</span>
-                                        <button
-                                            onClick={() => handleEnroll(course)}
-                                            className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition-all shadow-md shadow-blue-200"
-                                            title="Enroll"
-                                        >
-                                            <PlusCircle size={18} />
                                         </button>
                                     </div>
                                 </div>

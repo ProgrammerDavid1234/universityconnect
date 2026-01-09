@@ -99,7 +99,7 @@ const Courses = () => {
 
                             <div className="flex gap-3">
                                 <button className="flex-1 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
-                                    Access Materials
+                                    Enroll into Course
                                 </button>
                                 <button
                                     onClick={() => setSelectedCourse(null)}
