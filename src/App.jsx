@@ -5,6 +5,8 @@ import DashboardLayout from './Components/Dashboard/DashboardLayout'
 import { Courses, Assignments, Enrollments, Submissions, DashboardHome } from './Components/Dashboard/Modules'
 import TeacherDashboardLayout from './Components/TeacherDashboard/TeacherDashboardLayout'
 import { TeacherCourses, TeacherAssignments, TeacherEnrollments, TeacherSubmissions, TeacherDashboardHome } from './Components/TeacherDashboard/Modules'
+import AdminDashboardLayout from './Components/AdminDashboard/AdminDashboardLayout'
+import { AdminDashboardHome, UserManagement, AdminCourses, AdminAssignments, AdminSubmissions, AdminEnrollments } from './Components/AdminDashboard/Modules'
 
 const App = () => {
   return (
@@ -26,6 +28,16 @@ const App = () => {
           <Route path="assignments" element={<TeacherAssignments />} />
           <Route path="enrollments" element={<TeacherEnrollments />} />
           <Route path="submissions" element={<TeacherSubmissions />} />
+        </Route>
+
+        {/* Admin Dashboard Routes */}
+        <Route path="/admin-dashboard" element={<AdminDashboardLayout />}>
+          <Route index element={<AdminDashboardHome />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="courses" element={<AdminCourses />} />
+          <Route path="assignments" element={<AdminAssignments />} />
+          <Route path="submissions" element={<AdminSubmissions />} />
+          <Route path="enrollments" element={<AdminEnrollments />} />
         </Route>
       </Routes>
     </BrowserRouter>

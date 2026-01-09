@@ -51,7 +51,7 @@ const Auth = () => {
                 {/* Left Side - Illustration */}
                 <div className={styles.illustrationSection}>
                     <div className={styles.illustrationContent}>
-                        <h2>{isSignUp ? 'Join KolaDaisi University' : 'Welcome to KDU'}</h2>
+                        <h2>{isSignUp ? 'Join NACOS' : 'Welcome to NACOS'}</h2>
                         <p>
                             {isSignUp
                                 ? 'Knowledge for the Service of Humanity'
@@ -63,7 +63,7 @@ const Auth = () => {
                 {/* Right Side - Form */}
                 <div className={styles.formSection}>
                     <div className={styles.header}>
-                        <h1>{isSignUp ? 'KDU University Connect' : 'University Connect Login'}</h1>
+                        <h1>{isSignUp ? 'NACOS University Connect' : 'University Connect Login'}</h1>
                         <p>{isSignUp ? 'Enter details to register your account' : 'Welcome back! Please enter your details'}</p>
                     </div>
 

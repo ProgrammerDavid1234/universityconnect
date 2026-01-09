@@ -15,7 +15,7 @@ const TeacherSidebar = () => {
     return (
         <aside className={styles.sidebar}>
             <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#1a1a2e' }}>
-                <span className="text-2xl font-bold text-green-700">KDU</span> Teacher
+                <span className="text-2xl font-bold text-green-700">NACOS</span> Teacher
             </div>
 
             <nav className={styles.nav}>

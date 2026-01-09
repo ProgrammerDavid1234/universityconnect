@@ -28,7 +28,7 @@
 /* Left Side - Illustration/Image */
 .illustrationSection {
   flex: 1;
-  background: linear-gradient(135deg, #2e7d32 0%, #004d40 100%); /* Lush Green Gradient for KDU */
+  background: linear-gradient(135deg, #2e7d32 0%, #004d40 100%); /* Lush Green Gradient for NACOS */
   display: flex;
   align-items: center;
   justify-content: center;

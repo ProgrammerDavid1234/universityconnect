@@ -7,9 +7,9 @@ const mockAssignments = [
 ];
 
 const mockSubmissions = [
-    { id: 201, studentName: 'Alice Johnson', matric: 'KDU/2021/0045', submittedAt: '2025-10-14 14:30', status: 'Graded', score: 18, feedback: 'Great work!', file: 'linked_list.py' },
-    { id: 202, studentName: 'Bob Smith', matric: 'KDU/2021/0052', submittedAt: '2025-10-15 09:15', status: 'Pending', score: null, feedback: '', file: 'list_impl.java' },
-    { id: 203, studentName: 'Charlie Brown', matric: 'KDU/2021/0061', submittedAt: '2025-10-15 10:00', status: 'Pending', score: null, feedback: '', file: 'solution.cpp' },
+    { id: 201, studentName: 'Alice Johnson', matric: 'NACOS/2021/0045', submittedAt: '2025-10-14 14:30', status: 'Graded', score: 18, feedback: 'Great work!', file: 'linked_list.py' },
+    { id: 202, studentName: 'Bob Smith', matric: 'NACOS/2021/0052', submittedAt: '2025-10-15 09:15', status: 'Pending', score: null, feedback: '', file: 'list_impl.java' },
+    { id: 203, studentName: 'Charlie Brown', matric: 'NACOS/2021/0061', submittedAt: '2025-10-15 10:00', status: 'Pending', score: null, feedback: '', file: 'solution.cpp' },
 ];
 
 const TeacherSubmissions = () => {

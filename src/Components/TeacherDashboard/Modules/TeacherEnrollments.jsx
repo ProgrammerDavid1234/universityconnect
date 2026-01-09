@@ -4,11 +4,11 @@ import { Search, Filter, Mail, MoreHorizontal, Download } from 'lucide-react';
 const mockCourses = ['CSC 301', 'CSC 305', 'GNS 301'];
 
 const mockStudents = [
-    { id: 101, name: 'Alice Johnson', matric: 'KDU/2021/0045', email: 'alice.j@kdu.edu.ng', department: 'Computer Science', level: '300' },
-    { id: 102, name: 'Bob Smith', matric: 'KDU/2021/0052', email: 'bob.s@kdu.edu.ng', department: 'Computer Science', level: '300' },
-    { id: 103, name: 'Charlie Brown', matric: 'KDU/2021/0061', email: 'charlie.b@kdu.edu.ng', department: 'Software Engineering', level: '300' },
-    { id: 104, name: 'Diana Prince', matric: 'KDU/2021/0022', email: 'diana.p@kdu.edu.ng', department: 'Computer Science', level: '300' },
-    { id: 105, name: 'Evan Wright', matric: 'KDU/2021/0088', email: 'evan.w@kdu.edu.ng', department: 'Information Technology', level: '300' },
+    { id: 101, name: 'Alice Johnson', matric: 'NACOS/2021/0045', email: 'alice.j@nacos.org.ng', department: 'Computer Science', level: '300' },
+    { id: 102, name: 'Bob Smith', matric: 'NACOS/2021/0052', email: 'bob.s@nacos.org.ng', department: 'Computer Science', level: '300' },
+    { id: 103, name: 'Charlie Brown', matric: 'NACOS/2021/0061', email: 'charlie.b@nacos.org.ng', department: 'Software Engineering', level: '300' },
+    { id: 104, name: 'Diana Prince', matric: 'NACOS/2021/0022', email: 'diana.p@nacos.org.ng', department: 'Computer Science', level: '300' },
+    { id: 105, name: 'Evan Wright', matric: 'NACOS/2021/0088', email: 'evan.w@nacos.org.ng', department: 'Information Technology', level: '300' },
 ];
 
 const TeacherEnrollments = () => {

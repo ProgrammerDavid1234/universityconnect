@@ -1,21 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, FileText, GraduationCap, Upload, LogOut } from 'lucide-react';
-import styles from './Dashboard.module.css';
+import { LayoutDashboard, Users, BookOpen, FileText, Upload, GraduationCap, BarChart2, LogOut } from 'lucide-react';
+import styles from '../Dashboard/Dashboard.module.css'; // Reusing styles
 
-const Sidebar = () => {
+const AdminSidebar = () => {
     const navItems = [
-        { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
-        { icon: BookOpen, label: 'Courses', path: '/dashboard/courses' },
-        { icon: FileText, label: 'Assignments', path: '/dashboard/assignments' },
-        { icon: GraduationCap, label: 'Enrollments', path: '/dashboard/enrollments' },
-        { icon: Upload, label: 'Submissions', path: '/dashboard/submissions' },
+        { icon: LayoutDashboard, label: 'Overview', path: '/admin-dashboard' },
+        { icon: Users, label: 'Users', path: '/admin-dashboard/users' },
+        { icon: BookOpen, label: 'Courses', path: '/admin-dashboard/courses' },
+        { icon: FileText, label: 'Assignments', path: '/admin-dashboard/assignments' },
+        { icon: Upload, label: 'Submissions', path: '/admin-dashboard/submissions' },
+        { icon: GraduationCap, label: 'Enrollments', path: '/admin-dashboard/enrollments' },
     ];
 
     return (
         <aside className={styles.sidebar}>
             <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#1a1a2e' }}>
-                <span className="text-2xl font-bold text-green-700">NACOS</span> Connect
+                <span className="text-2xl font-bold text-red-700">NACOS</span> Admin
             </div>
 
             <nav className={styles.nav}>
@@ -23,7 +24,7 @@ const Sidebar = () => {
                     <NavLink
                         key={item.path}
                         to={item.path}
-                        end={item.path === '/dashboard'}
+                        end={item.path === '/admin-dashboard'}
                         className={({ isActive }) =>
                             `${styles.navItem} ${isActive ? styles.activeNavItem : ''}`
                         }
@@ -44,4 +45,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default AdminSidebar;
